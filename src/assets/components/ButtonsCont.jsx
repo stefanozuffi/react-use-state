@@ -17,11 +17,11 @@ export default function ButtonsCont() {
 
     return(
         <>
-            <div className="buttons-container">
+            <div className="buttons-container container">
             {languages.map(item => {
                 return(
                     
-                        <div className="accordion-item" onClick={handleClick} data-id={item.id} key={item.id}>
+                        <div className={`accordion-item ${current === item.id ? 'active' : ''}`} onClick={handleClick} data-id={item.id} key={item.id}>
                             <h2 onClick={handleClick} data-id={item.id}>{item.title}</h2>
                         </div>
                         
@@ -30,8 +30,9 @@ export default function ButtonsCont() {
             }
                 
             </div>
-            <div className="card">
+            <div className="text-card container">
                 {current != 0  && <p>{languages.find(item => (current === item.id)).description}</p>}
+                {current == 0 && <p>No language selected..</p>}
             </div>
         </>
     )}

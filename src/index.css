@@ -6,9 +6,23 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #df0f0f;
+ 
   
 }
+
+.container {
+  width: 80%;
+  margin-left: 50px;
+}
+
+/* Header */
+h1 {
+  margin: 20px 0;
+  font-size: 2.5em;
+  color: #333;
+  padding: 30px;
+}
+
 
 /* Buttons */
 .buttons-container {
@@ -25,5 +39,19 @@ body {
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
 
+.active {
+  background-color: #ffd104;
+}
+
+/* Text Card */
+.text-card {
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 70px;
+  max-width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }

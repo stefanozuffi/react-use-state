@@ -1,4 +1,5 @@
 import languages from "../data/languages";
+import TextCard from "./TextCard";
 import { useState } from "react";
 
 export default function ButtonsCont() {
@@ -28,11 +29,7 @@ export default function ButtonsCont() {
                 )
                 })
             }
-                
             </div>
-            <div className="text-card container">
-                {current != 0  && <p>{languages.find(item => (current === item.id)).description}</p>}
-                {current == 0 && <p>No language selected..</p>}
-            </div>
+            <TextCard state={current}/>
         </>
     )}

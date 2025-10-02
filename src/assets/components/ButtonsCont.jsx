@@ -1,4 +1,5 @@
 import languages from "../data/languages";
+import Button from "./Button";
 import TextCard from "./TextCard";
 import { useState } from "react";
 
@@ -21,11 +22,7 @@ export default function ButtonsCont() {
             <div className="buttons-container container">
             {languages.map(item => {
                 return(
-                    
-                        <div className={`accordion-item ${current === item.id ? 'active' : ''}`} onClick={handleClick} data-id={item.id} key={item.id}>
-                            <h2 onClick={handleClick} data-id={item.id}>{item.title}</h2>
-                        </div>
-                        
+                    <Button state={current} item={item} fClick={handleClick} key={item.id}/>
                 )
                 })
             }
